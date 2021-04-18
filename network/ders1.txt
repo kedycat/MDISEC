@@ -1,0 +1,56 @@
+﻿		Network Ders 1
+
+İki makinenin aynı ağda olduğunu anlamak için gerekli olan şey --> subnet mask
+
+Aynı ağdaki makineleri birbiriyle iletişime sokan protokol --> arp 
+
+Makinelerin aynı ağda olup olmadığını nasıl anlarız ve arp protokolü burada ne işimize yarar?
+
+Arp Header 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arp paketleri, ilk anda (t0)’da haberleşirken, fiziki adresini bilmiyorken kullanılır. Daha sonraki haberleşmelerde ICMP yani ping kullanılır.(Arp 1 kere kullanılır.)
+
+Bir makine ayağa kalktığı anda eğer DHCP ile ip alıyorsa DHCP çalıştırır. Eğer statik ip verilmişse arp ile broadcast yapar ve kendi ip’sine sahip başka ip olup olmadığını anlamaya çalışır bu esnada yukarıdaki wireshark’ta SENDER IP ADDRESS, SENDER MAC ADDRESS, TARGET IP ADDRESS, TARGET MAC ADDRES bölümlerini görürüz.
+
+
+
+
+
+
+
+SENDER MAC ADDRESS
+Kendi mac adres bilgisi üzerinden bu kısıma kendi mac adresini yerleştirir. Eğer özel mac adresi vermek istemezsek buraya ff:ﬀ:ﬀ:ﬀ:ﬀ:ff gelmesi gerekir.
+
+SENDER IP ADDRESS
+Buraya 0.0.0.0 gelir.
+
+TARGET MAC ADDRES
+Buraya herkesle konuşmak için ve herkesin mac adresini bilmediği için 00:00:00:00:00:00 mac adresini verir.
+
+1:31
+
+
+
